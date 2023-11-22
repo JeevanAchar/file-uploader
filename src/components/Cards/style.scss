@@ -1,0 +1,45 @@
+.cards-container {
+    display: block;
+}
+
+.cards-block {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    overflow: auto;
+}
+
+.cards-inner-block {
+    max-width: 282px;
+    padding: 16px;
+}
+
+.cards-inner-block img {
+    width: 250px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.cards-inner-block h4 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #000;
+}
+
+.cards-block-d {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #9CA3AF;
+    width: 100%;
+}
+
+.cards-block-d img {
+    height: 24px;
+    width: 24px;
+    margin-bottom: 0;
+    object-fit: contain;
+}

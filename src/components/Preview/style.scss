@@ -1,0 +1,29 @@
+.preview {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.preview h4 {
+    color: #111827;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.preview p {
+    color: var(--primary-color-palettes-neutral-neutral-400, #9CA3AF);
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.blank {
+    flex-grow: 1;
+    min-height: 100px;
+    background-size:     contain;
+    background-repeat:   no-repeat;
+    background-position: center center;    
+    background-color: grey;   
+}

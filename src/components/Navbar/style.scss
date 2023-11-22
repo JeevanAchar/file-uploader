@@ -1,0 +1,19 @@
+.navbar-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 40px;
+    border-bottom: 1.5px solid var(--primary-color-palettes-neutral-neutral-100, #F3F4F6);
+}
+
+.navbar-block img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.navbar-block h2 {
+    margin: 0 0 0 20px;
+    color: #111827;
+    font-size: 16px;
+}
