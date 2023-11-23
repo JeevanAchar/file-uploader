@@ -1,13 +1,15 @@
 import React, { useContext, useState } from "react";
 import "./style.scss";
 import { ProjectContext } from "../../context";
+import { db } from "../../firebase-config";
+import { collection, addDoc } from "firebase/firestore";
 
 function NewProject() {
     const context = useContext(ProjectContext);
     const [projectName, setProjectName] = useState("");
     const [fileName, setFileName] = useState("");
     const [imageData, setImageData] = useState("");
-    
+    const fileCollectionRef = collection(db, "files");
 
     const fileSelect = () => {
         document.getElementById("file-upload").click();
@@ -24,7 +26,7 @@ function NewProject() {
         }
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (projectName.trim() === "" || fileName.trim() === "" || imageData.trim() === "") {
             return;
         }
@@ -38,13 +40,13 @@ function NewProject() {
             ...context.projects
         ];
         context.setProject(projects);
-        localStorage.setItem('projects', JSON.stringify(projects));
+        await addDoc(fileCollectionRef, { title: projectName, image: imageData, timestamp: new Date()});
         setFileName("");
         setProjectName("");
         setImageData("");
         context.setPreview(null);
     }
- 
+
     return (
         <div className="new-project-block">
             <h4>Start a new Project</h4>

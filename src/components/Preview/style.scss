@@ -22,8 +22,9 @@
 .blank {
     flex-grow: 1;
     min-height: 100px;
-    background-size:     contain;
-    background-repeat:   no-repeat;
-    background-position: center center;    
-    background-color: grey;   
+    max-height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: grey;
 }

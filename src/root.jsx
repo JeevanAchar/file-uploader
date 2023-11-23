@@ -5,6 +5,7 @@ import NewProject from "./components/NewProject";
 import Preview from "./components/Preview";
 import { ContextWrapper } from "./context";
 
+
 function Root() {
     return (
         <ContextWrapper>

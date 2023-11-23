@@ -4,8 +4,8 @@ import Cards from "../Cards/cards";
 import { ProjectContext } from "../../context";
 
 function Preview() {
-    const {activePreview} = React.useContext(ProjectContext);
-    const background = !activePreview ? { background: 'grey' } : { backgroundImage: `url(${activePreview})` };  
+    const { activePreview } = React.useContext(ProjectContext);
+    const background = !activePreview ? { background: 'grey' } : { backgroundImage: `url(${activePreview})` };
 
     return (
         <div className="preview">
@@ -14,7 +14,7 @@ function Preview() {
                 <p>Select and browse your project image and start experimenting</p>
             </div>
             <div className="blank" style={{ ...background }} />
-            <Cards/>
+            <Cards />
         </div>
     )
 }
