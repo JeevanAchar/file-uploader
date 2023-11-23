@@ -5,8 +5,7 @@ import { ProjectContext } from "../../context";
 
 function Preview() {
     const {activePreview} = React.useContext(ProjectContext);
-    const background = !activePreview ? { background: 'grey' } : { backgroundImage: `url(${activePreview})` };
-    console.log(background);
+    const background = !activePreview ? { background: 'grey' } : { backgroundImage: `url(${activePreview})` };  
 
     return (
         <div className="preview">

@@ -57,7 +57,7 @@ function NewProject() {
 
             <div className="form-group project-step-1">
                 <label htmlFor="file-uploader">Step 2</label>
-                <input type="text" className="form-control file-uploader" placeholder={fileName || "Upload your Product image"} name="file-uploader" id="file-uploader" readonly />
+                <input type="text" className="form-control file-uploader" placeholder={fileName || "Upload your Product image"} name="file-uploader" id="file-uploader" readOnly />
                 <div className="dropzone" role="button" onClick={fileSelect} />
                 <input type="file" name="file-upload" accept="image/png, image/jpg, image/jpeg" id="file-upload" onChange={handleFile} />
             </div>
