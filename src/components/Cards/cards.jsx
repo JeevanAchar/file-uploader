@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { collection, orderBy, onSnapshot , query } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import moreIcon from "../../assets/menu.svg";
 import dayjs from "dayjs";
 import "./style.scss";
+import { ProjectContext } from "../../context";
 
 function Cards() {
     const [data, setData] = useState([]);
+    const { setPreview } = useContext(ProjectContext);
 
     useEffect(() => {
         const unsubscibe = onSnapshot(
@@ -28,7 +30,7 @@ function Cards() {
                 {
                     data.map((project, index) => {
                         return (
-                            <div key={index} className="cards-inner-block">
+                            <div key={index} className="cards-inner-block" onClick={() => setPreview(project.image)}>
                                 <img src={project.image} alt="" />
                                 <h4>{project.title}</h4>
                                 <div className="cards-block-d">
